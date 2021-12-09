@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+
+    <head>
+        <title>Homework #4: Fancy GapMinder</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src='https://d3js.org/d3.v5.min.js'></script>
+        <script src="script.js"></script>
+    </head>
+
+
+
+    <body>
+
+        <!-- INPUT ATTRIBUTE START -->
+        <div id="chart-wrapper">
+                <br>
+                <br>
+                <h3>Radhika Ganapathy</h4>
+                <h4>Homework #4</h5>
+<!-- Scatter Plot  -->        
+<svg id="chart"></svg>
+                <br>
+                <br>
+                &nbsp;Year:&nbsp;
+                <input id='year-input' type='number' value='1800' onchange="drawChart(value)"/>
+                &nbsp;&nbsp;&nbsp;
+
+                &nbsp;&nbsp;&nbsp;
+                <button id="play-button" class="btn btn-primary">Play</button>
+
+                
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;Choose Region: &nbsp;
+                <select id="region_select" onchange="drawChart(year)">
+                    <option value="All">All</option>
+                    <option value="Europe & Central Asia" selected>Europe & Central Asia</option>
+                    <option value="Middle East & North Africa">Middle East & North Africa</option>
+                    <option value="Sub-Saharan Africa">Sub-Saharan Africa</option>
+                    <option value="Latin America & Caribbean">Latin America & Caribbean</option>
+                    <option value="East Asia & Pacific">East Asia & Pacific</option>
+                    <option value="North America">North America</option>
+                    <option value="South Asia">South Asia</option>
+
+                    
+                </select>
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;Choose X-Attribute&nbsp;
+                <select id = "x-attribute" onchange="drawChart(year)">
+                    <option value="children" selected>Children per Woman</option>
+                    <option value="life_exp">Life Expectancy in Years</option>
+                    <option value="income">Income per day </option>
+                    <option value="co2_em">CO2 Emission pp</option>
+                    <option value="child_mortality">Child Mortality</option>
+                </select>
+
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;Choose Y-Attribute&nbsp;
+                <select id = "y-attribute" onchange="drawChart(year)">
+                    <!-- <option value="" disabled selected>Select your Y Attribute</option> -->
+                    <option value="children" selected>Children per Woman</option>
+                    <option value="life_exp">Life Expectancy in Years</option>
+                    <option value="income">Income per day </option>
+                    <option value="co2_em">CO2 Emission pp</option>
+                    <option value="child_mortality">Child Mortality</option>
+                </select>
+
+
+    
+
+        </div>
+        <!-- INPUT ATTRIBUTE END -->
+
+
+    </body>
+
+</html>
